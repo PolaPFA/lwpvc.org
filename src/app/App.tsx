@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import lwpLogo from "@/imports/LWPDraw.png";
 import {
   Scissors,
   Monitor,
@@ -207,25 +209,14 @@ function Nav() {
         {/* Logo */}
         <button
           onClick={() => scrollTo("#home")}
-          className="flex items-center gap-2.5 group"
+          className="flex items-center group"
           aria-label="Life with Purpose - go to top"
         >
-          <div
-            className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
-            style={{ background: "#1E8E43" }}
-          >
-            <Sprout size={18} color="#fff" />
-          </div>
-          <span
-            className="font-bold leading-tight hidden sm:block"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "1.05rem",
-              color: "#4B1E0F",
-            }}
-          >
-            Life with Purpose
-          </span>
+          <ImageWithFallback
+            src={lwpLogo}
+            alt="Life with Purpose logo"
+            className="h-10 w-auto object-contain"
+          />
         </button>
 
         {/* Desktop nav */}
@@ -1496,33 +1487,21 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
+            <div className="mb-4">
+              <ImageWithFallback
+                src={lwpLogo}
+                alt="Life with Purpose logo"
+                className="h-10 w-auto object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
               <div
-                className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{ background: "#1E8E43" }}
+                className="text-xs mt-2"
+                style={{
+                  color: "rgba(255,255,255,0.55)",
+                  fontFamily: "'DM Sans', sans-serif",
+                }}
               >
-                <Sprout size={20} color="#fff" />
-              </div>
-              <div>
-                <div
-                  className="font-bold"
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: "1rem",
-                    color: "#fff",
-                  }}
-                >
-                  Life with Purpose
-                </div>
-                <div
-                  className="text-xs"
-                  style={{
-                    color: "rgba(255,255,255,0.55)",
-                    fontFamily: "'DM Sans', sans-serif",
-                  }}
-                >
-                  Vocational Center · Uganda
-                </div>
+                Vocational Center · Uganda
               </div>
             </div>
             <p
