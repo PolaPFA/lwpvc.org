@@ -1517,10 +1517,10 @@ function Footer() {
               knowledge, and spiritual guidance for sustainable futures.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram].map((Icon, i) => (
+              {[Instagram].map((Icon, i) => (
                 <a
                   key={i}
-                  href={i}+".com/lwpuganda"
+                  href="https://www.instagram.com/lwpuganda"
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150"
                   style={{ background: "rgba(255,255,255,0.1)" }}
                   onMouseEnter={(e) =>
