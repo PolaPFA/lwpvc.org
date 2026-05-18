@@ -1517,10 +1517,10 @@ function Footer() {
               knowledge, and spiritual guidance for sustainable futures.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram].map((Icon, i) => (
+              {[Facebook, Instagram].map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href="https://www.{i}.com/lwpuganda"
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150"
                   style={{ background: "rgba(255,255,255,0.1)" }}
                   onMouseEnter={(e) =>
@@ -1582,8 +1582,7 @@ function Footer() {
             <ul className="space-y-3">
               {[
                 { icon: <MapPin size={14} />, text: "Kampala, Uganda" },
-                { icon: <Mail size={14} />, text: "info@lifewithpurpose.ug" },
-                { icon: <Phone size={14} />, text: "+256 700 000 000" },
+                { icon: <Mail size={14} />, text: "info@lwpvc.org" },
               ].map((item, i) => (
                 <li
                   key={i}
