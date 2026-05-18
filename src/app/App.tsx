@@ -1520,7 +1520,7 @@ function Footer() {
               {[Facebook, Instagram].map((Icon, i) => (
                 <a
                   key={i}
-                  href="https://www.{i}.com/lwpuganda"
+                  href={i}+".com/lwpuganda"
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150"
                   style={{ background: "rgba(255,255,255,0.1)" }}
                   onMouseEnter={(e) =>
